@@ -2,6 +2,11 @@
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+jobs:
+- job: Test
+  timeoutInMinutes: 3
+  cancelTimeoutInMinutes: 3
+
 
 trigger:
 - master
@@ -20,10 +25,7 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-jobs:
-- job: Test
-  timeoutInMinutes: 3
-  cancelTimeoutInMinutes: 3
+
 
 - task: kiuwan-baseline-analysis-task@2
   inputs:
