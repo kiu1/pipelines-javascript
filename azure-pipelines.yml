@@ -1,4 +1,16 @@
 # Node.js
+- task: kiuwan-baseline-analysis-task@2
+  inputs:
+    kiuwanConnection: 'Kiuwan Plugin'
+    projectnameselector: 'default'
+    analysislabel: 'Kiuwan JavaScript Analysis'
+    includeinsight: false
+    uploadsnippets: true
+    uploadfiles: false
+    skipclones: false
+    overridedotkiuwan: false
+    overrideappmodel: false
+    dbanalysis: false
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
