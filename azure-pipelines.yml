@@ -20,6 +20,11 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+jobs:
+- job: Test
+  timeoutInMinutes: 3
+  cancelTimeoutInMinutes: 3
+
 - task: kiuwan-baseline-analysis-task@2
   inputs:
     kiuwanConnection: 'Kiuwan Plugin'
