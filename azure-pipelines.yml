@@ -7,7 +7,6 @@ jobs:
   timeoutInMinutes: 3
   cancelTimeoutInMinutes: 3
 
-
 trigger:
 - master
 
