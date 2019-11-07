@@ -21,17 +21,15 @@ steps:
   displayName: 'npm install and build'
 
 
-
 - task: kiuwan-baseline-analysis-task@2
   inputs:
-    kiuwanConnection: 'Kiuwan Plugin'
     projectnameselector: 'default'
-    analysislabel: 'Kiuwan JavaScript Analysis'
-    includeinsight: false
+    includeinsight: true
     uploadsnippets: true
     uploadfiles: false
     skipclones: false
     overridedotkiuwan: false
     overrideappmodel: false
+    excludepatterns: '**/*.min.js,**/*.Designer.vb,**/*Reference.vb,**/*Service.vb,**/*Silverlight.vb,**/*.designer.vb,**/*reference.vb,**/*service.vb,**/*silverlight.vb,**/*.Designer.cs,**/*Reference.cs,**/*Service.cs,**/*Silverlight.cs,**/*.designer.cs,**/*reference.cs,**/*service.cs,**/*silverlight.cs,**/.*,**/Pods/BuildHeaders/**/*.h,**/Pods/Headers/**/*.h,*.js'
     timeout: '2'
     dbanalysis: false
