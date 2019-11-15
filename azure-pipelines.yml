@@ -23,12 +23,14 @@ steps:
 - task: kiuwan-baseline-analysis-task@2
   inputs:
     kiuwanConnection: 'Kiuwan Plugin'
-    projectnameselector: 'default'
-    analysislabel: 'AzureDevOps'
+    projectnameselector: 'kiuwanapp'
+    kiuwanappname: 'Kiuwan Application Security'
+    analysislabel: 'Build'
     includeinsight: true
     uploadsnippets: true
     uploadfiles: false
     skipclones: false
     overridedotkiuwan: false
     overrideappmodel: false
-    dbanalysis: false
+    dbanalysis: true
+    dbtechnology: 'plsql'
